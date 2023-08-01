@@ -21,8 +21,9 @@ const User = sequelize.define('user',{
             this.setDataValue('hashedPassword',hash)
         }
     }
+},{
+    timestamps: false
 })
-
 
 
 export default User
