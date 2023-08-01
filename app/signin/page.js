@@ -57,6 +57,7 @@ const SignInPage = () => {
                 :
                 <div>
                     <h2>You are logged in.</h2>
+                    <button type="submit" onClick={() => setIsLoggedIn(!isLoggedIn)}>Log Out</button>
                 </div>
             }
         </div>
