@@ -1,14 +1,15 @@
-const Sequelize = require('sequelize')
+const { Sequelize } = require('sequelize')
 
 const username = 'postgres';
-const password = encodeURIComponent('bishal@123');
+const password = 'bishal@123';
 const host = 'localhost';
 const port = 5432;
-const databaseName = 'dbforlogin';
+const databaseName = 'logindb';
+
+const passwordEncoded = encodeURIComponent(password); // URL-encode the password
 
 const sequelize = new Sequelize(
-    `postgres://${username}:${password}@${host}:${port}/${databaseName}`,
-    {
+    `postgres://${username}:${passwordEncoded}@${host}:${port}/${databaseName}`,{
         dialectModule: require('pg')
     }
 )
@@ -25,12 +26,12 @@ const tableSync = async () => {
 const testConnection = () => {
     try {
         sequelize.authenticate()
-            .then(() => {
-                console.log("Connection is successful.")
-            })
-            .catch(err => {
-                console.log("Connection is not successful.")
-            })
+        .then(() => {
+            console.log("Connection is successful.")
+        })
+        .catch(err => {
+            console.log("Connection is not successful.")
+        })
     } catch (err) {
         console.log(err)
     }
@@ -39,5 +40,4 @@ const testConnection = () => {
 testConnection()
 tableSync()
 
-
-module.exports = { sequelize }
+module.exports = { sequelize };

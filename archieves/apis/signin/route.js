@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import User from '@/models/User';
+import User from '@/archieves/models/User';
 const bcrypt = require('bcrypt')
 
 export async function POST(req, res) {
