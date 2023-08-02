@@ -18,13 +18,12 @@ export default function Home() {
           'content-type': 'application/json'
         }
       })
-      console.log(res)
       if (res.ok) {
         const msg = await res.json()
         setResponseMessage(msg)
       }
       else {
-        console.log("Pass unsuccessful.")
+        setResponseMessage({message : "API failure."})
       }
     } catch (error) {
       console.log(error)
