@@ -11,7 +11,7 @@ export default function Home() {
     const objData = { username, password }
 
     try {
-      const res = await fetch('http://localhost:3000/api/login', {
+      const res = await fetch('http://localhost:3000/api/signup', {
         method: 'POST',
         body: JSON.stringify(objData),
         headers: {
@@ -36,8 +36,8 @@ export default function Home() {
 
   return (
     <div className=" flex flex-col w-full justify-center items-center mt-4 ">
-      <div className=" flex justify-center items-center flex-col w-1/2 border rounded-lg">
-        <h1 className=" text-2xl font-semibold uppercase text-center w-full mb-4 text-white p-4 rounded-lg bg-blue-400 ">Sign Up</h1>
+      <div className=" flex justify-center items-center flex-col w-1/3 border rounded-lg">
+        <h1 className=" text-2xl font-semibold uppercase text-center w-full mb-4 text-white p-4 rounded-t-lg bg-blue-400 ">Sign Up</h1>
         <div className=" w-full p-8 ">
           <form onSubmit={handleSubmit} className=" w-full flex flex-col gap-8 justify-center items-center " >
             <div className=" w-full flex gap-6 items-center justify-center ">
