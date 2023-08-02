@@ -1,4 +1,5 @@
 "use client"
+import Disclaimer from "@/components/Disclaimer"
 import { useState } from "react"
 
 export default function Home() {
@@ -35,6 +36,7 @@ export default function Home() {
 
   return (
     <div className=" flex flex-col w-full justify-center items-center mt-4 ">
+      <Disclaimer />
       <div className=" flex justify-center items-center flex-col w-1/3 border rounded-lg">
         <h1 className=" text-2xl font-semibold uppercase text-center w-full mb-4 text-white p-4 rounded-t-lg bg-blue-400 ">Sign Up</h1>
         <div className=" w-full p-8 ">
