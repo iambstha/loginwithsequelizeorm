@@ -1,4 +1,7 @@
 # Sign Up & Sign In Using NextJS / Sequelize / PostgreSQL
+
+### Disclaimer: WORK IN PROGRESS!
+
 This is a [Next.js](https://nextjs.org/) project.
 
 ### Sign Up Page
